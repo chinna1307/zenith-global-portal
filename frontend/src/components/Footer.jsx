@@ -7,7 +7,11 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     <div className="space-y-4">
-                        <div className="text-2xl font-bold">Zenith<span className="text-teal-500">Global</span></div>
+                        {/* Updated Logo: Zenith(White) Global(Teal) Pvt Ltd(Teal + Small) */}
+                        <div className="text-2xl font-bold flex items-baseline">
+                            Zenith<span className="text-teal-500">Global</span>
+                            <span className="ml-2 text-sm font-semibold text-teal-500">Pvt Ltd</span>
+                        </div>
                         <p className="text-gray-400 text-sm leading-relaxed">Empowering businesses with AI-driven development and world-class IT staffing solutions.</p>
                         <div className="flex gap-4 pt-2">
                             <a href="#" className="text-gray-400 hover:text-white"><Twitter className="h-5 w-5" /></a>
