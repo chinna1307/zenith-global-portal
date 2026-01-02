@@ -15,7 +15,6 @@ const Navbar = () => {
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
             }, 100);
         } else {
-            // Special check: If scrolling to 'home', scroll to the very top of the page
             if (id === 'home') {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
@@ -31,15 +30,14 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('home')}>
-                        {/* Logo */}
+                        {/* LOGO UPDATED: Pvt Ltd is now BLACK */}
                         <div className="flex items-baseline">
                             <span className="text-2xl md:text-3xl font-extrabold text-blue-700 tracking-tight">Zenith</span>
                             <span className="text-2xl md:text-3xl font-extrabold text-teal-600 tracking-tight">Global</span>
-                            <span className="ml-2 text-xs md:text-sm font-semibold text-gray-400 uppercase tracking-widest border border-gray-200 px-1.5 py-0.5 rounded">Pvt Ltd</span>
+                            <span className="ml-2 text-xs md:text-sm font-bold text-black uppercase tracking-widest border border-gray-200 px-1.5 py-0.5 rounded bg-gray-50">Pvt Ltd</span>
                         </div>
                     </div>
                     
-                    {/* Desktop Menu */}
                     <nav className="hidden md:flex space-x-8">
                         <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-blue-600 font-medium transition">Home</button>
                         <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-blue-600 font-medium transition">Services</button>
@@ -59,7 +57,6 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                {/* Mobile Menu */}
                 {isOpen && (
                     <div className="md:hidden py-4 border-t bg-gray-50">
                         <nav className="flex flex-col space-y-4 px-4">
