@@ -30,11 +30,11 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('home')}>
-                        {/* LOGO UPDATED: Pvt Ltd is Black, Title Case (Pvt Ltd) */}
+                        {/* LOGO UPDATED: Pvt Ltd is now clean text (No Box) */}
                         <div className="flex items-baseline">
                             <span className="text-2xl md:text-3xl font-extrabold text-blue-700 tracking-tight">Zenith</span>
                             <span className="text-2xl md:text-3xl font-extrabold text-teal-600 tracking-tight">Global</span>
-                            <span className="ml-2 text-xs md:text-sm font-bold text-black border border-gray-200 px-1.5 py-0.5 rounded bg-gray-50">Pvt Ltd</span>
+                            <span className="ml-2 text-sm md:text-base font-bold text-black">Pvt Ltd</span>
                         </div>
                     </div>
                     
