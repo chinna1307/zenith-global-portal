@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Facebook } from 'lucide-react';
 
 const Footer = () => {
@@ -18,7 +17,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                    &copy; {new Date().getFullYear()} Zenith Global Solutions. All rights reserved.
+                    &copy; {new Date().getFullYear()} Zenith Global Private Limited. All rights reserved.
                 </div>
             </div>
         </footer>
