@@ -16,7 +16,7 @@ const Hero = () => {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Digital Vision</span>
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                            Zenith Global Solutions delivers enterprise-grade SaaS, AI integration, and IT staffing.
+                            Zenith Global Private Limited delivers enterprise-grade SaaS, AI integration, and IT staffing.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">
                             <a href="#contact" className="bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
