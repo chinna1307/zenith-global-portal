@@ -9,6 +9,7 @@ const Contact = () => {
         e.preventDefault();
         setStatus("loading");
         try {
+            // Note: This API link stays the same (it connects to your Render backend)
             const response = await fetch('https://zenith-global-portal.onrender.com/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -30,13 +31,13 @@ const Contact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <div>
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">Let's Build The Future</h2>
-                        <p className="text-xl text-gray-600 mb-12">Ready to transform your business? Reach out to Zenith Global Solutions today.</p>
+                        <p className="text-xl text-gray-600 mb-12">Ready to transform your business? Reach out to Zenith Global Private Limited today.</p>
                         <div className="space-y-8">
-                            <div className="flex items-center gap-4"><div className="bg-blue-100 p-4 rounded-full"><Mail className="h-6 w-6 text-blue-600" /></div><div><h4 className="font-bold text-gray-900">Email Us</h4><p className="text-gray-600">contact@zenithglobalsolutions.com</p></div></div>
+                            <div className="flex items-center gap-4"><div className="bg-blue-100 p-4 rounded-full"><Mail className="h-6 w-6 text-blue-600" /></div><div><h4 className="font-bold text-gray-900">Email Us</h4><p className="text-gray-600">contact@zenithglobalprivatelimited.com</p></div></div>
                             <div className="flex items-center gap-4"><div className="bg-teal-100 p-4 rounded-full"><Phone className="h-6 w-6 text-teal-600" /></div><div><h4 className="font-bold text-gray-900">Call Us</h4><p className="text-gray-600">+1 (555) 123-4567</p></div></div>
                         </div>
                     </div>
-                    <div className="bg-gray-50 rounded-3xl p-8 shadow-inner border border-gray-100">
+                    <div className="bg-gray-5 rounded-3xl p-8 shadow-inner border border-gray-100">
                         {status === "success" ? (
                             <div className="h-full flex flex-col items-center justify-center text-center py-12">
                                 <CheckCircle className="h-20 w-20 text-green-500 mb-6" />
