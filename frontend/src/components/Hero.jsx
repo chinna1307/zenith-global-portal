@@ -3,7 +3,22 @@ import { Sparkles, ArrowRight, Shield, CheckCircle } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative bg-gradient-to-br from-blue-50 via-white to-teal-50 py-24 lg:py-32 overflow-hidden">
+        // Added 'relative' and 'overflow-hidden' to keep blobs inside
+        <section id="home" className="relative bg-white py-24 lg:py-32 overflow-hidden">
+            
+            {/* --- AURA ANIMATION BACKGROUND START --- */}
+            <div className="absolute inset-0 w-full h-full pointer-events-none">
+                {/* Blob 1: Blue (Top Left) */}
+                <div className="absolute top-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+                
+                {/* Blob 2: Teal (Top Right) - Delayed for smooth independent movement */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+                
+                {/* Blob 3: Green (Bottom Center) - Delayed even more */}
+                <div className="absolute -bottom-32 left-20 w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+            </div>
+            {/* --- AURA ANIMATION BACKGROUND END --- */}
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="space-y-8 animate-fade-in-up">
@@ -27,12 +42,26 @@ const Hero = () => {
                             </a>
                         </div>
                     </div>
+                    
+                    {/* Right Side Cards */}
                     <div className="relative lg:h-full flex justify-center items-center">
-                        <div className="relative bg-white bg-opacity-80 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20 w-full max-w-md">
+                         {/* Subtle glow behind the cards too */}
+                         <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-teal-100 rounded-full filter blur-3xl opacity-40 animate-pulse"></div>
+
+                        <div className="relative bg-white/90 backdrop-blur-xl rounded-2xl p-8 shadow-2xl border border-white/50 w-full max-w-md">
                             <div className="space-y-6">
-                                <div className="flex items-center gap-4"><div className="bg-green-100 p-3 rounded-full"><Shield className="h-6 w-6 text-green-600" /></div><div><h3 className="font-bold text-gray-900">Enterprise Security</h3><p className="text-sm text-gray-500">Bank-grade encryption</p></div></div>
-                                <div className="flex items-center gap-4"><div className="bg-blue-100 p-3 rounded-full"><CheckCircle className="h-6 w-6 text-blue-600" /></div><div><h3 className="font-bold text-gray-900">Cloud Scalability</h3><p className="text-sm text-gray-500">AWS & Azure Certified</p></div></div>
-                                <div className="flex items-center gap-4"><div className="bg-purple-100 p-3 rounded-full"><Sparkles className="h-6 w-6 text-purple-600" /></div><div><h3 className="font-bold text-gray-900">AI Integration</h3><p className="text-sm text-gray-500">Smart automation ready</p></div></div>
+                                <div className="flex items-center gap-4">
+                                    <div className="bg-green-100 p-3 rounded-full"><Shield className="h-6 w-6 text-green-600" /></div>
+                                    <div><h3 className="font-bold text-gray-900">Enterprise Security</h3><p className="text-sm text-gray-500">Bank-grade encryption</p></div>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    <div className="bg-blue-100 p-3 rounded-full"><CheckCircle className="h-6 w-6 text-blue-600" /></div>
+                                    <div><h3 className="font-bold text-gray-900">Cloud Scalability</h3><p className="text-sm text-gray-500">AWS & Azure Certified</p></div>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    <div className="bg-purple-100 p-3 rounded-full"><Sparkles className="h-6 w-6 text-purple-600" /></div>
+                                    <div><h3 className="font-bold text-gray-900">AI Integration</h3><p className="text-sm text-gray-500">Smart automation ready</p></div>
+                                </div>
                             </div>
                         </div>
                     </div>
