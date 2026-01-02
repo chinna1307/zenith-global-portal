@@ -26,9 +26,11 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     <div className="flex items-center space-x-2 cursor-pointer" onClick={() => navigate('/')}>
-                        {/* Logo Updated: Zenith (Blue) + Global Pvt Ltd (Teal) */}
-                        <div className="text-2xl md:text-3xl font-bold text-blue-700">
-                            Zenith<span className="text-teal-600">Global Pvt Ltd</span>
+                        {/* IMPROVED LOGO DESIGN */}
+                        <div className="flex items-baseline">
+                            <span className="text-2xl md:text-3xl font-extrabold text-blue-700 tracking-tight">Zenith</span>
+                            <span className="text-2xl md:text-3xl font-extrabold text-teal-600 tracking-tight">Global</span>
+                            <span className="ml-2 text-xs md:text-sm font-semibold text-gray-400 uppercase tracking-widest border border-gray-200 px-1.5 py-0.5 rounded">Pvt Ltd</span>
                         </div>
                     </div>
                     <nav className="hidden md:flex space-x-8">
