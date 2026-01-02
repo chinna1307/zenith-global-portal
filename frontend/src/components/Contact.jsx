@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Mail, Phone, MapPin, CheckCircle, Loader2 } from 'lucide-react';
+import { Send, Mail, CheckCircle, Loader2 } from 'lucide-react';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: "", email: "", company: "", message: "" });
@@ -9,7 +9,6 @@ const Contact = () => {
         e.preventDefault();
         setStatus("loading");
         try {
-            // Note: This API link stays the same (it connects to your Render backend)
             const response = await fetch('https://zenith-global-portal.onrender.com/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -33,8 +32,17 @@ const Contact = () => {
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">Let's Build The Future</h2>
                         <p className="text-xl text-gray-600 mb-12">Ready to transform your business? Reach out to Zenith Global Private Limited today.</p>
                         <div className="space-y-8">
-                            <div className="flex items-center gap-4"><div className="bg-blue-100 p-4 rounded-full"><Mail className="h-6 w-6 text-blue-600" /></div><div><h4 className="font-bold text-gray-900">Email Us</h4><p className="text-gray-600">contact@zenithglobalprivatelimited.com</p></div></div>
-                            <div className="flex items-center gap-4"><div className="bg-teal-100 p-4 rounded-full"><Phone className="h-6 w-6 text-teal-600" /></div><div><h4 className="font-bold text-gray-900">Call Us</h4><p className="text-gray-600">+1 (555) 123-4567</p></div></div>
+                            {/* Updated Email Section */}
+                            <div className="flex items-center gap-4">
+                                <div className="bg-blue-100 p-4 rounded-full">
+                                    <Mail className="h-6 w-6 text-blue-600" />
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-900">Email Us</h4>
+                                    <p className="text-gray-600">info@zenithglobalprivatelimited.com</p>
+                                </div>
+                            </div>
+                            {/* Call Us Section Removed */}
                         </div>
                     </div>
                     <div className="bg-gray-5 rounded-3xl p-8 shadow-inner border border-gray-100">
