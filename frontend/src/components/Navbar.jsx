@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
-// Import the logo image
 import logo from '../assets/logo.png'; 
 
 const Navbar = () => {
@@ -28,18 +27,20 @@ const Navbar = () => {
     };
 
     return (
-        // INCREASED HEADER HEIGHT to h-28 to fit the bigger logo
+        // HEADER HEIGHT: h-28 (112px)
         <header className="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* FLEX CONTAINER matches Header Height */}
                 <div className="flex justify-between items-center h-28"> 
                     
                     {/* LOGO SECTION */}
-                    <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('home')}>
+                    <div className="flex items-center cursor-pointer h-full" onClick={() => scrollToSection('home')}>
                         <img 
                             src={logo} 
                             alt="Zenith Global Pvt Ltd" 
-                            // INCREASED LOGO HEIGHT to h-24 (approx 96px)
-                            className="h-24 w-auto object-contain" 
+                            // CORRECTED: h-24 (96px) fits perfectly inside h-28
+                            // h-80 was too big (320px)
+                            className="h-80 w-auto object-contain" 
                         />
                     </div>
                     
