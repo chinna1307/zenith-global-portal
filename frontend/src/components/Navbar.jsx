@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.png'; // <--- THIS IMPORTS YOUR IMAGE
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,14 +29,18 @@ const Navbar = () => {
     return (
         <header className="bg-white shadow-md sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
-                    <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('home')}>
-                        {/* LOGO UPDATED: Pvt Ltd is now clean text (No Box) */}
-                        <div className="flex items-baseline">
-                            <span className="text-2xl md:text-3xl font-extrabold text-blue-700 tracking-tight">Zenith</span>
-                            <span className="text-2xl md:text-3xl font-extrabold text-teal-600 tracking-tight">Global</span>
-                            <span className="ml-2 text-sm md:text-base font-bold text-black">Pvt Ltd</span>
-                        </div>
+                <div className="flex justify-between items-center h-24">
+                    <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('home')}>
+                        
+                        {/* --- THIS IS THE CHANGE --- */}
+                        {/* Replaced the text code with this Image tag */}
+                        <img 
+                            src={logo} 
+                            alt="Zenith Global Pvt Ltd" 
+                            className="h-20 w-auto object-contain" 
+                        />
+                        {/* --------------------------- */}
+
                     </div>
                     
                     <nav className="hidden md:flex space-x-8">
